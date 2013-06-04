@@ -10,8 +10,9 @@
 
 if(confirm('Html5?')) {
     x = document.URL.split('/');
-    url = 'https://www.youtube-nocookie.com/embed/';
-    url += x[x.length-1];
+    x = x[x.length-1].split('?v=');
+    x = x[1].split('&');
+    url = 'https://www.youtube-nocookie.com/embed/'+x[0];
     document.location = url;
 }
 ```
